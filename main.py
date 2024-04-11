@@ -8,7 +8,7 @@ load_dotenv()
 genai.configure(api_key=os.environ["API_KEY"])
 model = genai.GenerativeModel("gemini-pro")
 intents = discord.Intents.default()
-intents.messages = True
+intents.message_content = True
 bot = commands.Bot(command_prefix="/", intents=intents)
 
 @bot.hybrid_command(name="chat", description="Gemini-AI")
